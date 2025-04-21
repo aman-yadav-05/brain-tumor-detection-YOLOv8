@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Prediction Logs</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 p-8">
+  <div class="max-w-4xl mx-auto bg-white shadow-md p-6 rounded">
+    <h2 class="text-2xl font-bold mb-4">Prediction Logs</h2>
+    <table class="min-w-full text-left table-auto">
+      <thead>
+        <tr>
+          <th class="px-4 py-2">Filename</th>
+          <th class="px-4 py-2">Label</th>
+          <th class="px-4 py-2">Confidence (%)</th>
+          <th class="px-4 py-2">Timestamp</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for log in logs %}
+        <tr class="border-t">
+          <td class="px-4 py-2">{{ log.filename }}</td>
+          <td class="px-4 py-2">{{ log.label }}</td>
+          <td class="px-4 py-2">{{ log.confidence }}</td>
+          <td class="px-4 py-2">{{ log.timestamp }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>

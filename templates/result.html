@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Detection Result</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
+
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <div class="bg-white p-6 rounded-lg shadow-md w-full max-w-lg text-center">
+    <h2 class="text-2xl font-bold text-gray-800 mb-4">Prediction Result</h2>
+    <img src="{{ result_image }}" alt="Prediction Result" class="rounded shadow mb-4">
+    <p class="text-gray-700 font-medium text-lg">Detected: <span class="text-blue-600">{{ label }}</span></p>
+    <p class="text-gray-700 font-medium text-lg">Confidence: <span class="text-green-600">{{ confidence }}%</span></p>
+    <div class="mt-4 text-left">
+      <h3 class="text-lg font-semibold text-gray-800 mb-2">Common Symptoms:</h3>
+      <ul class="list-disc list-inside text-gray-700">
+        {% for symptom in symptoms %}
+        <li>{{ symptom }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <a href="/" class="inline-block mt-6 text-blue-600 hover:underline">🔁 Try another image</a>
+  </div>
+
+</body>
+
+</html>

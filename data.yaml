@@ -1,0 +1,5 @@
+train: D:/major project/brain_tumor_bounding_box/brain_tumor_yolo/images/train
+val: D:/major project/brain_tumor_bounding_box/brain_tumor_yolo/images/val
+
+nc: 2
+names: ['tumor','no_tumor']
