@@ -73,7 +73,7 @@ Timestamp
 
 
 ### 📁 Project Structure
-
+```pgsql
 ├── app.py
 ├── templates/
 │   ├── index.html
@@ -86,4 +86,4 @@ Timestamp
 ├── database.db
 ├── requirements.txt
 └── README.md
-
+```
